@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Hello!
+{% endblock %}
+
+{% block feedback %}
+    {% if name and age and location %}
+        <h1>Welcome!</h1> 
+        <p>Hello {{ name }}, I can see that you're {{ age }} and that you live in {{ location }}.</p>
+    {% else %}
+        <h1>Error!</h1>
+        <p>You have not filled in <b>all</b> of the requested information.</p>
+    {% endif %}
+
+{% endblock %}
+

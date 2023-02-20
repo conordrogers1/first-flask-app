@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Index{% endblock%}</title>
+</head>
+<body>
+  
+  <h1>Form</h1>
+  <p>Please enter your details below.</p>
+
+  <form method="POST" action="/process">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"><br>
+
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location"><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  {% block feedback %}{% endblock %}
+
+  <h1>The full list of database users:</h1>
+  {% for result in results %}
+  <p>Name: {{ result.name }} | Age: {{ result.age }} | Location: {{ result.location }}</p>
+  {% endfor %}
+
+
+</body>
+</html>

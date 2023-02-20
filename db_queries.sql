@@ -1,0 +1,6 @@
+CREATE TABLE people (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL, 
+    age INTEGER NOT NULL,
+    location TEXT NULL
+);
