@@ -31,9 +31,9 @@ def home():
 
 @app.route('/process', methods=['GET', 'POST'])
 def process():
-    name = request.form['name'].capitalize()
+    name = request.form['name'].title()
     age = request.form['age']
-    location = request.form['location'].capitalize()
+    location = request.form['location'].title()
     
     db = get_db()
     
