@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, g
 import sqlite3
 
-
+# set the Flask app
 app = Flask(__name__)
 
 def connect_db():
